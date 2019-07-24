@@ -1,2 +1,15 @@
 // Global SCSS styling
 // @see https://docs.nativescript.org/ui/styling
+
+* {
+  font-family: "Poppins";
+}
+.btn-primary {
+  height: 50;
+  border-radius: 5;
+  font-size: 20;
+  font-weight: 600;
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+}
