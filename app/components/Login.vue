@@ -25,7 +25,7 @@
         <!-- <ActivityIndicator rowSpan="3" :busy="processing"></ActivityIndicator> -->
       </GridLayout>
 
-      <Button text="ENTRAR" class="btn-login btn-primary"></Button>
+      <Button text="ENTRAR" @tap="$navigateTo(profile)" class="btn-login btn-primary"></Button>
       <Label text="Esqueceu a senha ? Clique aqui!"
         class="login-label"></Label>
     </StackLayout>
@@ -41,9 +41,11 @@
 
 <script>
   import Register from './Register'
+  import Profile from './Profile'
   export default {
     data: () => ({
-      register: Register
+      register: Register,
+      profile: Profile
     }) 
   };
 </script>

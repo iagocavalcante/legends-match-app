@@ -1,15 +1,6 @@
 <template>
   <Page backgroundSpanUnderStatusBar="true" androidStatusBarBackground="#BE1965">
-    <ActionBar flat="true">
-      <!-- <GridLayout columns="40, *" :rows="maxactionbarheight" row="0" width="100%"> -->
-        <!-- <Image class="ab-action" stretch="none" src="~/assets/images/baseline-arrow_back-24px.png" col="0" verticalAlignment="center" horizontalAlignment="left"/>      -->
-        <FlexboxLayout alignContent="center" class="header">
-          <Label alignSelf="center" class="header-legend" text="LEGENDS"></Label>
-          <Label alignSelf="center" class="header-match" text="MATCH"></Label>
-        </FlexboxLayout>
-      <!-- </GridLayout> -->
-      <NavigationButton text="" android.systemIcon="ic_menu_back"/>
-    </ActionBar>
+    <LMActionBar/>
     <GridLayout rows="*">
       <ScrollView row="0" scrollBarIndicatorVisible="false"
         paddingBottom="100">
@@ -85,10 +76,10 @@
                 autocapitalizationType="none"
                 ></TextField>
                 <FlexboxLayout class="position" flexWrap="wrap" alignContent="space-between">
-                  <Label class="chips" text="TOP LANER"></Label>
-                  <Label class="chips" text="AD CARRY"></Label>
-                  <Label class="chips" text="CAMPER"></Label>
-                  <Label class="chips" text="TOP LANER"></Label>
+                  <LMChips text="TOP LANER"/>
+                  <LMChips text="AD CARRY"/>
+                  <LMChips text="CAMPER"/>
+                  <LMChips text="TOP LANER"/>
                 </FlexboxLayout>
             </StackLayout>
             <StackLayout row="1" class="input-field">
@@ -97,10 +88,10 @@
                 autocapitalizationType="none"
                 ></TextField>
                 <FlexboxLayout class="position" flexWrap="wrap" alignContent="space-between">
-                  <Label class="chips" text="TOP LANER"></Label>
-                  <Label class="chips" text="AD CARRY"></Label>
-                  <Label class="chips" text="CAMPER"></Label>
-                  <Label class="chips" text="TOP LANER"></Label>
+                  <LMChips text="TOP LANER"/>
+                  <LMChips text="AD CARRY"/>
+                  <LMChips text="CAMPER"/>
+                  <LMChips text="TOP LANER"/>
                 </FlexboxLayout>
             </StackLayout>
             <StackLayout row="2" class="input-field">
@@ -109,10 +100,10 @@
                 autocapitalizationType="none"
                 ></TextField>
                 <FlexboxLayout class="position" flexWrap="wrap" alignContent="space-between">
-                  <Label class="chips" text="TOP LANER"></Label>
-                  <Label class="chips" text="AD CARRY"></Label>
-                  <Label class="chips" text="CAMPER"></Label>
-                  <Label class="chips" text="TOP LANER"></Label>
+                  <LMChips text="TOP LANER"/>
+                  <LMChips text="AD CARRY"/>
+                  <LMChips text="CAMPER"/>
+                  <LMChips text="TOP LANER"/>
                 </FlexboxLayout>
             </StackLayout>
           </GridLayout>
@@ -165,7 +156,13 @@
 
 <script>
   import { isAndroid } from "platform";
+  import LMActionBar from './LMActionBar'
+  import LMChips from './LMChips'
   export default {
+    components: {
+      LMActionBar,
+      LMChips
+    },
     data: () => ({
       maxactionbarheight: isAndroid ? 50 : 35,
       countries: [
@@ -222,20 +219,6 @@
 
 .chips:first {
   margin: 0;
-}
-
-.chips {
-  height: 26;
-  margin-left: 10;
-  border-radius: 13;
-  font-family: "Poppins";
-  background-color: #633280;
-  color: white;
-  text-align: center;
-  padding: 10;
-  margin-top: 10;
-  font-size: 14;
-  font-weight: 300;
 }
 
 .label-jogador {
@@ -355,19 +338,6 @@
     .innactive {
       color: #d6d6d6;
     }
-  }
-}
-
-.header {
-  horizontal-align: center;
-  font-size: 20;
-  .header-legend {
-    font-weight: 300;
-    color: #be1965;
-  }
-  .header-match {
-    font-weight: bold;
-    color: #633280;
   }
 }
 </style>
