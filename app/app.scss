@@ -13,3 +13,43 @@
 .btn-primary:disabled {
   opacity: 0.5;
 }
+
+.label-name {
+  font-family: "Poppins";
+  font-size: 26;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 39;
+  color: #be1965;
+}
+
+.label-lastname {
+  font-family: "Poppins";
+  font-size: 20;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 30;
+  color: #be1965;
+}
+
+.level {
+  margin-left: 5;
+  height: 25;
+  padding: 10;
+  border-radius: 50;
+  background-color: #be1965;
+  font-family: "Poppins";
+  font-size: 16;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 25;
+  color: #ffffff;
+}
+
+.title {
+  font-family: "Poppins";
+  font-size: 16;
+  font-weight: normal;
+  font-style: normal;
+  color: #be1965;
+}
